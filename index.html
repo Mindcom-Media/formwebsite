@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow - Motion Analysis for Gym Training</title>
+    <meta name="description" content="Flow is a motion analysis app for gym training. Perfect your form, maximize muscle growth, and train with confidence.">
+    <meta property="og:title" content="Flow - Motion Analysis for Gym Training">
+    <meta property="og:description" content="Perfect your form. Maximize muscle growth. Train with confidence.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* NAV */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #2dd4a8;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #fff; }
+        .nav-cta {
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 24px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff !important;
+            transition: all 0.2s;
+        }
+        .nav-cta:hover {
+            background: #fff;
+            color: #0a0a0a !important;
+        }
+
+        /* HERO */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px 80px;
+            gap: 60px;
+            min-height: calc(100vh - 80px);
+        }
+        .hero-text {
+            flex: 1;
+            max-width: 560px;
+        }
+        .hero-text h1 {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            color: #fff;
+        }
+        .hero-text h1 .highlight {
+            background: linear-gradient(135deg, #2dd4a8, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #888;
+            margin-bottom: 40px;
+            max-width: 440px;
+        }
+        .store-buttons {
+            display: flex;
+            gap: 16px;
+        }
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            color: #0a0a0a;
+            padding: 14px 28px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .store-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+        .store-btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* PHONE MOCKUP */
+        .hero-phone {
+            flex-shrink: 0;
+        }
+        .phone-frame {
+            width: 300px;
+            height: 620px;
+            background: #1a1a1a;
+            border-radius: 50px;
+            padding: 12px;
+            box-shadow:
+                0 0 0 2px #333,
+                0 40px 80px rgba(0,0,0,0.5),
+                0 0 120px rgba(45, 212, 168, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            overflow: hidden;
+            background: #000;
+        }
+        .phone-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .phone-notch {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 28px;
+            background: #0a0a0a;
+            border-radius: 0 0 18px 18px;
+            z-index: 10;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .footer-brand {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .footer-brand span { color: #2dd4a8; }
+        .footer-tagline {
+            color: #666;
+            font-size: 13px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: #fff; }
+        .footer-contact {
+            color: #666;
+            font-size: 13px;
+            text-align: right;
+        }
+        .footer-contact a {
+            color: #888;
+            text-decoration: none;
+        }
+        .footer-contact a:hover { color: #fff; }
+        .footer-bottom {
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            color: #444;
+            font-size: 12px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .nav-links { gap: 16px; }
+            .nav-links a:not(.nav-cta) { display: none; }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px 60px;
+                gap: 48px;
+                min-height: auto;
+            }
+            .hero-text { max-width: 100%; }
+            .hero-text p {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .store-buttons { justify-content: center; }
+            .phone-frame {
+                width: 260px;
+                height: 540px;
+                border-radius: 44px;
+                padding: 10px;
+            }
+            .phone-screen { border-radius: 36px; }
+            .phone-notch { width: 100px; height: 24px; top: 10px; }
+
+            footer { padding: 32px 20px; }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-contact { text-align: center; }
+            .footer-links { gap: 24px; }
+        }
+
+        @media (max-width: 420px) {
+            .store-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .store-btn {
+                width: 100%;
+                max-width: 220px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Flow<span>.</span></a>
+        <div class="nav-links">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="#" class="nav-cta">Download App</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Perfect your <span class="highlight">form.</span><br>Grow your muscles.</h1>
+            <p>AI-powered motion analysis that watches your gym technique in real-time. Stop guessing, start growing.</p>
+            <div class="store-buttons">
+                <a href="#" class="store-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    App Store
+                </a>
+            </div>
+        </div>
+        <div class="hero-phone">
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <img src="splash.jpg" alt="Flow app - motion analysis for gym training">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-brand">Flow<span>.</span></div>
+                <div class="footer-tagline">Motion analysis for gym training</div>
+            </div>
+            <div class="footer-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms & Conditions</a>
+            </div>
+            <div class="footer-contact">
+                <p>Support: <a href="mailto:support@flowapp.com">support@flowapp.com</a></p>
+                <p>Mindcom Media</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Flow. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
