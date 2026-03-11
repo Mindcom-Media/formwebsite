@@ -110,55 +110,103 @@
 
     <div class="content">
         <h1>Privacy Policy</h1>
-        <p class="date">Last updated: March 11, 2025</p>
+        <p class="date">Last updated: 11 March 2026</p>
 
-        <h2>1. Introduction</h2>
-        <p>Form ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+        <h2>1. Who We Are</h2>
+        <p>Form is operated by Mindcom Media Ltd ("we", "us", "our"), a company registered in the United Kingdom.</p>
+        <p>Contact: Tim O'Shea<br>Email: <a href="mailto:hello@getunlocked.ai">hello@getunlocked.ai</a></p>
+        <p>For the purposes of the EU General Data Protection Regulation (GDPR), the UK GDPR, and applicable US state privacy laws, Mindcom Media Ltd is the data controller.</p>
 
-        <h2>2. Information We Collect</h2>
-        <p>We may collect the following types of information:</p>
+        <h2>2. What Data We Collect</h2>
+        <p>Form is designed with a privacy-first architecture. All data processing occurs locally on your device. We do not collect, transmit, or store any personal data on external servers.</p>
+        <p>Data processed locally on your device includes:</p>
         <ul>
-            <li><strong>Camera Data:</strong> Form uses your device's camera to perform real-time motion analysis. Video data is processed on-device and is not uploaded to our servers unless you explicitly choose to share it.</li>
-            <li><strong>Usage Data:</strong> We collect anonymous usage statistics to improve the app experience, such as feature usage frequency and session duration.</li>
-            <li><strong>Device Information:</strong> Basic device information including device model, operating system version, and app version.</li>
+            <li><strong>Preferences & Settings:</strong> Training focus, experience level, favourite exercises, notification preferences, and capture settings.</li>
+            <li><strong>Exercise Session Data:</strong> Exercise type, date, duration, form analysis scores, sub-scores across scoring categories, per-rep analysis, and session notes.</li>
+            <li><strong>Video Data:</strong> Exercise videos you record are stored locally in the app's document directory. These videos never leave your device unless you explicitly choose to share them.</li>
+            <li><strong>Body Pose Data:</strong> Anonymised joint position data (17 body points) extracted from your videos using Apple's on-device Vision framework. This is not biometric identification data — it analyses body movement patterns only, with no facial recognition or identification.</li>
+            <li><strong>Drill & Progress Data:</strong> Drill completion records and daily focus recommendations generated locally.</li>
         </ul>
 
-        <h2>3. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
+        <h2>3. How We Use Your Data</h2>
+        <p>All data processing occurs entirely on your device for the following purposes:</p>
         <ul>
-            <li>Provide and maintain the motion analysis service</li>
-            <li>Improve and optimize the app's performance</li>
-            <li>Analyze usage patterns to enhance user experience</li>
-            <li>Communicate with you about updates or support</li>
+            <li>Analysing your exercise form using Apple's on-device Vision framework</li>
+            <li>Tracking your progress and generating form scores</li>
+            <li>Providing personalised daily focus recommendations</li>
+            <li>Sending local notifications for daily reminders (if enabled)</li>
+            <li>Allowing you to export your data at your discretion</li>
         </ul>
+        <p>We do not use your data for advertising, profiling, analytics, or any purpose beyond providing the app's core functionality.</p>
 
-        <h2>4. Data Storage & Security</h2>
-        <p>Your motion analysis data is processed locally on your device. We implement industry-standard security measures to protect any data that is transmitted to our servers. We do not sell, trade, or rent your personal information to third parties.</p>
+        <h2>4. Legal Basis for Processing (GDPR / UK GDPR)</h2>
+        <p>Where GDPR or UK GDPR applies, our legal basis for processing your data is:</p>
+        <p><strong>Legitimate Interest (Article 6(1)(f)):</strong> Processing your exercise data locally on your device to provide the app's core functionality. Since no data leaves your device, the impact on your privacy is minimal.</p>
+        <p><strong>Consent (Article 6(1)(a)):</strong> For optional features such as push notifications, which you can enable or disable at any time.</p>
+        <p>Since all processing occurs on-device and no personal data is transmitted to us, most GDPR obligations relating to server-side data processing do not apply.</p>
 
-        <h2>5. Third-Party Services</h2>
-        <p>Our app may use third-party services that have their own privacy policies, including:</p>
+        <h2>5. Data Storage & Security</h2>
+        <p>All your data is stored locally on your device using Apple's Core Data framework and the app's sandboxed document directory. Specifically:</p>
         <ul>
-            <li>Apple App Store (for distribution and payments)</li>
-            <li>Analytics services (anonymized usage data only)</li>
+            <li>Session data, scores, and preferences are stored in an encrypted SQLite database within the app sandbox</li>
+            <li>Videos are stored as MP4 files in the app's document directory</li>
+            <li>Frame analysis data is stored as JSON files locally</li>
         </ul>
+        <p>Your data is protected by your device's built-in security features, including device encryption and app sandboxing. We have no access to your data.</p>
 
-        <h2>6. Your Rights</h2>
-        <p>You have the right to:</p>
+        <h2>6. Data Sharing & Third Parties</h2>
+        <p>We do not share your data with any third parties. Specifically:</p>
         <ul>
-            <li>Access, correct, or delete your personal data</li>
-            <li>Opt out of analytics data collection</li>
-            <li>Request a copy of your data</li>
-            <li>Withdraw consent at any time</li>
+            <li>No data is transmitted to our servers or any external servers</li>
+            <li>No third-party analytics, advertising, or tracking services are integrated</li>
+            <li>No crash reporting services that collect personal data are used</li>
+            <li>No social media SDKs are integrated</li>
         </ul>
+        <p>The only way your data leaves the app is if you explicitly choose to export it using the Export All Data feature in Settings, or share a video through the system share sheet.</p>
 
-        <h2>7. Children's Privacy</h2>
-        <p>Form is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+        <h2>7. Your Rights</h2>
+        <p>Depending on your jurisdiction, you have the following rights:</p>
+        <p><strong>Under GDPR / UK GDPR:</strong></p>
+        <ul>
+            <li>Right of access: View all your data directly within the app, or export it as JSON</li>
+            <li>Right to rectification: Edit session notes within the app</li>
+            <li>Right to erasure: Delete individual sessions or all data via Settings > Delete All Data</li>
+            <li>Right to data portability: Export all your data as a structured JSON file</li>
+            <li>Right to restrict processing: Uninstall the app to stop all processing</li>
+            <li>Right to object: Since processing is local and essential to the app's function, objection can be exercised by discontinuing use</li>
+            <li>Right to lodge a complaint: You may contact the UK Information Commissioner's Office (ICO) or your local supervisory authority</li>
+        </ul>
+        <p><strong>Under US State Privacy Laws (CCPA/CPRA, Virginia CDPA, Colorado CPA, Connecticut CTDPA, and others):</strong></p>
+        <ul>
+            <li>Right to know what personal information is collected</li>
+            <li>Right to delete personal information</li>
+            <li>Right to opt out of the sale of personal information — we do not sell your data</li>
+            <li>Right to non-discrimination for exercising your rights</li>
+            <li>Right to data portability</li>
+        </ul>
+        <p>Because all data is stored locally on your device, you can exercise most of these rights directly within the app without needing to contact us.</p>
 
-        <h2>8. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+        <h2>8. Children's Privacy</h2>
+        <p>Form is not directed at children under the age of 16. We do not knowingly process data from children under 16. Since no data is transmitted to us, we cannot identify users by age. If you are a parent or guardian and believe your child is using the app inappropriately, please contact us.</p>
 
-        <h2>9. Contact Us</h2>
-        <p>If you have questions about this Privacy Policy, please contact us at <a href="mailto:hello@getunlocked.ai">hello@getunlocked.ai</a>.</p>
+        <h2>9. Camera Permission</h2>
+        <p>Form requests access to your device camera solely for the purpose of recording exercise videos for form analysis. Camera access can be granted or revoked at any time through your device's Settings app. Video footage is processed entirely on-device and is never transmitted externally.</p>
+
+        <h2>10. Data Retention</h2>
+        <p>Your data is retained on your device for as long as the app is installed. You may delete individual sessions or all data at any time from within the app. Uninstalling the app will permanently remove all associated data from your device.</p>
+
+        <h2>11. International Data Transfers</h2>
+        <p>Since all data processing occurs locally on your device, no international data transfers take place. Your data remains on your device regardless of your location.</p>
+
+        <h2>12. Do Not Track / Global Privacy Control</h2>
+        <p>Form does not track you across other apps or websites. We honour Do Not Track and Global Privacy Control signals by design, as no tracking occurs whatsoever.</p>
+
+        <h2>13. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this policy periodically. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>14. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us:</p>
+        <p>Mindcom Media Ltd<br>Contact: Tim O'Shea<br>Email: <a href="mailto:hello@getunlocked.ai">hello@getunlocked.ai</a></p>
     </div>
 
     <footer>
