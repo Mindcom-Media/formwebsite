@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo span { color: #2dd4a8; }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #fff; }
+
+        .content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 40px 80px;
+        }
+        .content h1 {
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 24px;
+        }
+        .content p {
+            color: #aaa;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .content a { color: #2dd4a8; }
+
+        .email-card {
+            background: #1a1a1a;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 32px;
+            margin-top: 32px;
+        }
+        .email-card h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .email-card a {
+            color: #2dd4a8;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .email-card a:hover { text-decoration: underline; }
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            color: #444;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .nav-links { gap: 16px; }
+            .content { padding: 40px 20px 60px; }
+            .content h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Form<span>.</span></a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>Support</h1>
+        <p>Need help with Form? We're here for you. Whether you have a question about the app, need help with a feature, or want to report an issue, don't hesitate to reach out.</p>
+
+        <div class="email-card">
+            <h2>Contact Us</h2>
+            <p style="margin-bottom: 4px;">Email us at:</p>
+            <a href="mailto:hello@getunlocked.ai">hello@getunlocked.ai</a>
+        </div>
+
+        <p style="margin-top: 32px;">We aim to respond to all enquiries within 48 hours.</p>
+    </div>
+
+    <footer>
+        &copy; 2025 Form. All rights reserved.
+    </footer>
+</body>
+</html>
