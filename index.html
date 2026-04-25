@@ -32,14 +32,14 @@
             margin: 0 auto;
         }
         .logo {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: #fff;
+            display: inline-flex;
+            align-items: center;
             text-decoration: none;
         }
-        .logo span {
-            color: #2dd4a8;
+        .logo img {
+            height: 28px;
+            width: auto;
+            display: block;
         }
         .nav-links {
             display: flex;
@@ -92,10 +92,7 @@
             color: #fff;
         }
         .hero-text h1 .highlight {
-            background: linear-gradient(135deg, #2dd4a8, #22d3ee);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #dfff00;
         }
         .hero-text p {
             font-size: 18px;
@@ -143,7 +140,7 @@
             box-shadow:
                 0 0 0 2px #333,
                 0 40px 80px rgba(0,0,0,0.5),
-                0 0 120px rgba(45, 212, 168, 0.08);
+                0 0 120px rgba(223, 255, 0, 0.12);
             position: relative;
             overflow: hidden;
         }
@@ -187,11 +184,13 @@
             flex-wrap: wrap;
         }
         .footer-brand {
-            font-size: 20px;
-            font-weight: 800;
             margin-bottom: 8px;
         }
-        .footer-brand span { color: #2dd4a8; }
+        .footer-brand img {
+            height: 22px;
+            width: auto;
+            display: block;
+        }
         .footer-tagline {
             color: #666;
             font-size: 13px;
@@ -280,7 +279,7 @@
 </head>
 <body>
     <nav>
-        <a href="/" class="logo">Form<span>.</span></a>
+        <a href="/" class="logo"><img src="logo.png" alt="Form"></a>
         <div class="nav-links">
             <a href="#" class="nav-cta">Download App</a>
         </div>
@@ -301,7 +300,7 @@
             <div class="phone-frame">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                    <img src="splash.jpg" alt="Form app - motion analysis for gym training">
+                    <img src="app-screenshot.png" alt="Form app - motion analysis for gym training">
                 </div>
             </div>
         </div>
@@ -310,7 +309,7 @@
     <footer>
         <div class="footer-content">
             <div>
-                <div class="footer-brand">Form<span>.</span></div>
+                <div class="footer-brand"><img src="logo.png" alt="Form"></div>
                 <div class="footer-tagline">Motion analysis for gym training</div>
             </div>
             <div class="footer-links">

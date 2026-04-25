@@ -24,13 +24,11 @@
             margin: 0 auto;
         }
         .logo {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: #fff;
+            display: inline-flex;
+            align-items: center;
             text-decoration: none;
         }
-        .logo span { color: #2dd4a8; }
+        .logo img { height: 28px; width: auto; display: block; }
         .nav-links {
             display: flex;
             gap: 32px;
@@ -79,7 +77,7 @@
             margin-bottom: 16px;
         }
         .content li { margin-bottom: 8px; }
-        .content a { color: #2dd4a8; }
+        .content a { color: #dfff00; }
 
         footer {
             border-top: 1px solid rgba(255,255,255,0.08);
@@ -101,7 +99,7 @@
 </head>
 <body>
     <nav>
-        <a href="/" class="logo">Form<span>.</span></a>
+        <a href="/" class="logo"><img src="logo.png" alt="Form"></a>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/privacy.html">Privacy</a>
