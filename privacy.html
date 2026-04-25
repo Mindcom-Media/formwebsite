@@ -109,102 +109,142 @@
 
     <div class="content">
         <h1>Privacy Policy</h1>
-        <p class="date">Last updated: 11 March 2026</p>
+        <p class="date">Last updated: 25 April 2026</p>
 
         <h2>1. Who We Are</h2>
-        <p>Form is operated by Mindcom Media Ltd ("we", "us", "our"), a company registered in the United Kingdom.</p>
+        <p>Form ("the App") is operated by Mindcom Media Ltd ("we", "us", "our"), a company registered in the United Kingdom.</p>
         <p>Contact: Tim O'Shea<br>Email: <a href="mailto:hello@getunlocked.ai">hello@getunlocked.ai</a></p>
         <p>For the purposes of the EU General Data Protection Regulation (GDPR), the UK GDPR, and applicable US state privacy laws, Mindcom Media Ltd is the data controller.</p>
 
-        <h2>2. What Data We Collect</h2>
-        <p>Form is designed with a privacy-first architecture. All data processing occurs locally on your device. We do not collect, transmit, or store any personal data on external servers.</p>
+        <h2>2. Summary (Apple App Store Privacy Disclosure)</h2>
+        <p>In line with Apple's App Store privacy framework, Form is registered as "Data Not Collected". This means:</p>
+        <ul>
+            <li>We do not collect any data from the App.</li>
+            <li>We do not link any data to your identity.</li>
+            <li>We do not use any data for tracking purposes as defined by Apple's App Tracking Transparency (ATT) framework.</li>
+            <li>We do not use third-party SDKs that collect, transmit, or share user data.</li>
+        </ul>
+        <p>All exercise analysis, scoring, and recommendations are performed entirely on your device. Form does not require an account, does not require an internet connection, and makes no network requests during normal operation.</p>
+
+        <h2>3. What Data is Processed On-Device</h2>
+        <p>Although we do not collect data, the App necessarily processes information locally on your device to provide its core functionality. This information never leaves your device unless you explicitly choose to share or export it.</p>
         <p>Data processed locally on your device includes:</p>
         <ul>
             <li><strong>Preferences & Settings:</strong> Training focus, experience level, favourite exercises, notification preferences, and capture settings.</li>
             <li><strong>Exercise Session Data:</strong> Exercise type, date, duration, form analysis scores, sub-scores across scoring categories, per-rep analysis, and session notes.</li>
-            <li><strong>Video Data:</strong> Exercise videos you record are stored locally in the app's document directory. These videos never leave your device unless you explicitly choose to share them.</li>
-            <li><strong>Body Pose Data:</strong> Anonymised joint position data (17 body points) extracted from your videos using Apple's on-device Vision framework. This is not biometric identification data — it analyses body movement patterns only, with no facial recognition or identification.</li>
+            <li><strong>Video & Audio Data:</strong> Exercise videos you record or import are stored locally in the App's sandboxed document directory. Recorded videos may include audio captured by your device's microphone. These files never leave your device unless you explicitly share or export them.</li>
+            <li><strong>Body Pose Data:</strong> Anonymised joint position data (17 body points) extracted from your videos using Apple's on-device Vision framework. This is not biometric identification data — it analyses body movement patterns only, with no facial recognition or identity inference.</li>
             <li><strong>Drill & Progress Data:</strong> Drill completion records and daily focus recommendations generated locally.</li>
         </ul>
+        <p>We have no access to any of the above data.</p>
 
-        <h2>3. How We Use Your Data</h2>
+        <h2>4. How Your Data Is Used</h2>
         <p>All data processing occurs entirely on your device for the following purposes:</p>
         <ul>
             <li>Analysing your exercise form using Apple's on-device Vision framework</li>
-            <li>Tracking your progress and generating form scores</li>
+            <li>Tracking your progress and generating Form Scores</li>
             <li>Providing personalised daily focus recommendations</li>
             <li>Sending local notifications for daily reminders (if enabled)</li>
             <li>Allowing you to export your data at your discretion</li>
         </ul>
-        <p>We do not use your data for advertising, profiling, analytics, or any purpose beyond providing the app's core functionality.</p>
+        <p>We do not use your data for advertising, profiling, analytics, or any purpose beyond providing the App's core functionality.</p>
 
-        <h2>4. Legal Basis for Processing (GDPR / UK GDPR)</h2>
-        <p>Where GDPR or UK GDPR applies, our legal basis for processing your data is:</p>
-        <p><strong>Legitimate Interest (Article 6(1)(f)):</strong> Processing your exercise data locally on your device to provide the app's core functionality. Since no data leaves your device, the impact on your privacy is minimal.</p>
-        <p><strong>Consent (Article 6(1)(a)):</strong> For optional features such as push notifications, which you can enable or disable at any time.</p>
-        <p>Since all processing occurs on-device and no personal data is transmitted to us, most GDPR obligations relating to server-side data processing do not apply.</p>
-
-        <h2>5. Data Storage & Security</h2>
-        <p>All your data is stored locally on your device using Apple's Core Data framework and the app's sandboxed document directory. Specifically:</p>
+        <h2>5. Permissions We Request</h2>
+        <p>Form requests the following device permissions. You may grant or revoke any permission at any time via your device's Settings app.</p>
         <ul>
-            <li>Session data, scores, and preferences are stored in an encrypted SQLite database within the app sandbox</li>
-            <li>Videos are stored as MP4 files in the app's document directory</li>
-            <li>Frame analysis data is stored as JSON files locally</li>
+            <li><strong>Camera (NSCameraUsageDescription):</strong> Used solely to record exercise videos for on-device form analysis. Video footage is processed locally and is never transmitted externally.</li>
+            <li><strong>Microphone (NSMicrophoneUsageDescription):</strong> When recording video, audio may be captured as part of the standard video file. Audio is stored only on your device and is not analysed or transmitted.</li>
+            <li><strong>Photo Library (NSPhotoLibraryUsageDescription / PHPickerViewController):</strong> Used to let you select videos from your photo library for analysis. The App uses Apple's standard photo picker, which provides access only to the items you select.</li>
+            <li><strong>Notifications (UNUserNotificationCenter):</strong> Used to deliver local reminders if you enable them. All notifications are scheduled locally; no push servers are involved.</li>
         </ul>
-        <p>Your data is protected by your device's built-in security features, including device encryption and app sandboxing. We have no access to your data.</p>
+        <p>Form does not request access to Health data, location, contacts, calendars, motion & fitness, or any other sensitive data category.</p>
 
-        <h2>6. Data Sharing & Third Parties</h2>
+        <h2>6. Legal Basis for Processing (GDPR / UK GDPR)</h2>
+        <p>Where GDPR or UK GDPR applies, our legal basis for processing is:</p>
+        <ul>
+            <li><strong>Legitimate Interest (Article 6(1)(f)):</strong> Processing your exercise data locally on your device to provide the App's core functionality. Since no data leaves your device, the impact on your privacy is minimal.</li>
+            <li><strong>Consent (Article 6(1)(a)):</strong> For optional features such as local notifications, camera, microphone, and photo library access, which you can enable or disable at any time via system settings.</li>
+        </ul>
+        <p>Since all processing occurs on-device and no personal data is transmitted to us, server-side GDPR obligations do not apply.</p>
+
+        <h2>7. Data Storage & Security</h2>
+        <p>All your data is stored locally on your device using Apple's Core Data framework and the App's sandboxed document directory. Specifically:</p>
+        <ul>
+            <li>Session data, scores, and preferences are stored in a SQLite database within the App sandbox, protected by iOS data protection.</li>
+            <li>Videos are stored as MP4 files in the App's document directory.</li>
+            <li>Frame analysis data is stored as JSON files locally.</li>
+        </ul>
+        <p>Your data is protected by your device's built-in security features, including device encryption and App sandboxing. We have no access to your data.</p>
+
+        <h2>8. Data Sharing & Third Parties</h2>
         <p>We do not share your data with any third parties. Specifically:</p>
         <ul>
-            <li>No data is transmitted to our servers or any external servers</li>
-            <li>No third-party analytics, advertising, or tracking services are integrated</li>
-            <li>No crash reporting services that collect personal data are used</li>
-            <li>No social media SDKs are integrated</li>
+            <li>No data is transmitted to our servers or any external servers.</li>
+            <li>No third-party analytics, advertising, attribution, or tracking SDKs are integrated.</li>
+            <li>No crash reporting services that collect personal data are used.</li>
+            <li>No social media SDKs are integrated.</li>
         </ul>
-        <p>The only way your data leaves the app is if you explicitly choose to export it using the Export All Data feature in Settings, or share a video through the system share sheet.</p>
+        <p>The only ways your data leaves the App are if you explicitly:</p>
+        <ul>
+            <li>(a) export your data using the "Export All Data" feature in Settings, or</li>
+            <li>(b) share a video or analysis result through the iOS system share sheet.</li>
+        </ul>
+        <p>In both cases, you control the destination, and we receive nothing.</p>
 
-        <h2>7. Your Rights</h2>
+        <h2>9. App Tracking Transparency (ATT)</h2>
+        <p>Form does not engage in tracking as defined by Apple's App Tracking Transparency framework. We do not access the Identifier for Advertisers (IDFA), and we do not link any data collected within the App to data collected in other apps or websites for advertising or measurement purposes. The App therefore does not present an ATT prompt.</p>
+
+        <h2>10. Accounts and In-App Purchases</h2>
+        <p>Form does not require an account or sign-in. There is no registration, no username, no password, and no cloud profile associated with your use of the App. Because no account exists, there is no account to delete — uninstalling the App permanently removes all associated data from your device.</p>
+        <p>Form does not currently offer in-app purchases or subscriptions.</p>
+
+        <h2>11. Your Rights</h2>
         <p>Depending on your jurisdiction, you have the following rights:</p>
         <p><strong>Under GDPR / UK GDPR:</strong></p>
         <ul>
-            <li>Right of access: View all your data directly within the app, or export it as JSON</li>
-            <li>Right to rectification: Edit session notes within the app</li>
-            <li>Right to erasure: Delete individual sessions or all data via Settings > Delete All Data</li>
-            <li>Right to data portability: Export all your data as a structured JSON file</li>
-            <li>Right to restrict processing: Uninstall the app to stop all processing</li>
-            <li>Right to object: Since processing is local and essential to the app's function, objection can be exercised by discontinuing use</li>
-            <li>Right to lodge a complaint: You may contact the UK Information Commissioner's Office (ICO) or your local supervisory authority</li>
+            <li>Right of access: View all your data directly within the App, or export it as JSON / CSV.</li>
+            <li>Right to rectification: Edit session notes within the App.</li>
+            <li>Right to erasure: Delete individual sessions or all data via Settings > Your Data > Delete All Data.</li>
+            <li>Right to data portability: Export all your data as a structured file.</li>
+            <li>Right to restrict processing: Uninstall the App to stop all processing.</li>
+            <li>Right to object: Since processing is local and essential to the App's function, objection can be exercised by discontinuing use.</li>
+            <li>Right to lodge a complaint: You may contact the UK Information Commissioner's Office (ICO) or your local supervisory authority.</li>
         </ul>
         <p><strong>Under US State Privacy Laws (CCPA/CPRA, Virginia CDPA, Colorado CPA, Connecticut CTDPA, and others):</strong></p>
         <ul>
-            <li>Right to know what personal information is collected</li>
-            <li>Right to delete personal information</li>
-            <li>Right to opt out of the sale of personal information — we do not sell your data</li>
-            <li>Right to non-discrimination for exercising your rights</li>
-            <li>Right to data portability</li>
+            <li>Right to know what personal information is collected.</li>
+            <li>Right to delete personal information.</li>
+            <li>Right to opt out of the sale or sharing of personal information — we do not sell or share your data.</li>
+            <li>Right to non-discrimination for exercising your rights.</li>
+            <li>Right to data portability.</li>
         </ul>
-        <p>Because all data is stored locally on your device, you can exercise most of these rights directly within the app without needing to contact us.</p>
+        <p>Because all data is stored locally on your device, you can exercise most of these rights directly within the App without needing to contact us.</p>
 
-        <h2>8. Children's Privacy</h2>
-        <p>Form is not directed at children under the age of 16. We do not knowingly process data from children under 16. Since no data is transmitted to us, we cannot identify users by age. If you are a parent or guardian and believe your child is using the app inappropriately, please contact us.</p>
+        <h2>12. Children's Privacy</h2>
+        <p>Form is not directed at children. In line with the US Children's Online Privacy Protection Act (COPPA), we do not knowingly collect any information from children under the age of 13. In line with the UK GDPR and EU GDPR, we do not knowingly process data from children under the age of 16 (or the equivalent age set by your member state).</p>
+        <p>Because no data is transmitted to us, we cannot identify users by age. If you are a parent or guardian and believe your child has used the App and you would like guidance, please contact us at <a href="mailto:hello@getunlocked.ai">hello@getunlocked.ai</a>.</p>
+        <p>The App carries an Apple age rating of 4+, reflecting that it contains no objectionable content; however, the fitness guidance and exercises shown are intended for adult use under appropriate supervision.</p>
 
-        <h2>9. Camera Permission</h2>
-        <p>Form requests access to your device camera solely for the purpose of recording exercise videos for form analysis. Camera access can be granted or revoked at any time through your device's Settings app. Video footage is processed entirely on-device and is never transmitted externally.</p>
+        <h2>13. Data Retention</h2>
+        <p>Your data is retained on your device for as long as the App is installed. You may delete individual sessions or all data at any time from within the App via Settings > Your Data. Uninstalling the App will permanently remove all associated data from your device. Because we hold no copy of your data, there is nothing for us to delete on our side.</p>
 
-        <h2>10. Data Retention</h2>
-        <p>Your data is retained on your device for as long as the app is installed. You may delete individual sessions or all data at any time from within the app. Uninstalling the app will permanently remove all associated data from your device.</p>
-
-        <h2>11. International Data Transfers</h2>
+        <h2>14. International Data Transfers</h2>
         <p>Since all data processing occurs locally on your device, no international data transfers take place. Your data remains on your device regardless of your location.</p>
 
-        <h2>12. Do Not Track / Global Privacy Control</h2>
+        <h2>15. Do Not Track / Global Privacy Control</h2>
         <p>Form does not track you across other apps or websites. We honour Do Not Track and Global Privacy Control signals by design, as no tracking occurs whatsoever.</p>
 
-        <h2>13. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this policy periodically. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+        <h2>16. Apple Privacy Manifest</h2>
+        <p>The App ships with an Apple Privacy Manifest (PrivacyInfo.xcprivacy) that declares its use of required-reason APIs and confirms that no tracking domains are contacted and no data types are collected, in accordance with Apple's App Store requirements.</p>
 
-        <h2>14. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us:</p>
+        <h2>17. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Material changes will be reflected on this page with an updated "Last updated" date and, where appropriate, surfaced within the App. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>18. Governing Law</h2>
+        <p>This Privacy Policy is governed by the laws of England and Wales. Nothing in this policy limits your statutory rights under the privacy laws of your own country or US state of residence.</p>
+
+        <h2>19. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or wish to exercise your rights, please contact:</p>
         <p>Mindcom Media Ltd<br>Contact: Tim O'Shea<br>Email: <a href="mailto:hello@getunlocked.ai">hello@getunlocked.ai</a></p>
     </div>
 
